@@ -7,6 +7,6 @@ Let people enrol themselves in a course only when their email address is at one 
 - Choose the role it gives (student by default). Teachers and managers can configure it (enrol/domain:config).
 - Enable the plugin first: Site administration > Plugins > Enrolments > Manage enrol plugins.
 
-The check uses the email address on the Moodle account, so make sure your site confirms email addresses on sign-up (the default email-based self-registration does).
+The check uses the email address on the Moodle account, so it is only as strong as your email checks: keep email-based self-registration (it confirms new addresses) and "Email change confirmation" (Site administration > Security > Site security settings, on by default) so nobody can type in an address they do not own.
 
 Moodle 4.5 to 5.3. Built by DevLMS: https://devlms.com
