@@ -206,7 +206,8 @@ class enrol_domain_plugin extends enrol_plugin {
             }
             $url = new moodle_url($PAGE->url, ['enrol_domain' => $instance->id, 'sesskey' => sesskey()]);
             $body = $OUTPUT->notification(get_string('welcome', 'enrol_domain'), 'info', false);
-            $body .= $OUTPUT->single_button($url, get_string('enrolme', 'enrol_domain'), 'post', ['primary' => true]);
+            $button = new single_button($url, get_string('enrolme', 'enrol_domain'), 'post', single_button::BUTTON_PRIMARY);
+            $body .= $OUTPUT->render($button);
         } else if (is_string($status)) {
             $body = $OUTPUT->notification($status, 'info', false);
         } else {
