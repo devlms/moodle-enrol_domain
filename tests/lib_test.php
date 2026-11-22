@@ -25,6 +25,12 @@ namespace enrol_domain;
  * @covers     \enrol_domain_plugin
  */
 final class lib_test extends \advanced_testcase {
+    public static function setUpBeforeClass(): void {
+        global $CFG;
+        parent::setUpBeforeClass();
+        require_once($CFG->dirroot . '/enrol/domain/lib.php');
+    }
+
     public function test_email_matching(): void {
         $domains = "school.edu\n Partner.org ";
         $this->assertTrue(\enrol_domain_plugin::email_allowed('ana@school.edu', $domains));
